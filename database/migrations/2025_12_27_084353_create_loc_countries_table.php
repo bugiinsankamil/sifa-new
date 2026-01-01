@@ -14,21 +14,23 @@ return new class extends Migration
         Schema::create('loc_countries', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('country_name_indonesia');
-            $table->string('country_name_english');
-            $table->string('fifa_code');
-            $table->string('iso3166_1_alpha_2');
-            $table->string('iso3166_1_alpha_3');
-            $table->string('iso3166_1_numeric');
-            $table->string('dial_code');
-            $table->string('iso4217_currency_name');
-            $table->string('iso4217_currency_alpha_code');
-            $table->string('iso4217_currency_numeric_code');
-            $table->string('independency');
-            $table->string('region_code');
-            $table->string('region_name');
-            $table->string('subregion_code');
-            $table->string('subregion_name');
+            $table->string('country_name_indonesia')->nullable();
+            $table->string('country_name_english')->nullable();
+            $table->string('capital_city')->nullable();
+            $table->string('continent')->nullable();
+            $table->string('region_name')->nullable();
+            $table->string('subregion_name')->nullable();
+            $table->string('fifa_code')->nullable();
+            $table->string('iso3166_1_alpha_2')->nullable();
+            $table->string('iso3166_1_alpha_3')->nullable();
+            $table->string('iso3166_1_numeric')->nullable();
+            $table->string('dial_code')->nullable();
+            $table->string('iso4217_currency_name')->nullable();
+            $table->string('iso4217_currency_alpha_code')->nullable();
+            $table->string('iso4217_currency_numeric_code')->nullable();
+            $table->string('tld')->nullable();
+            $table->string('geoname_id')->nullable();
+            $table->string('wiki_page')->nullable();
             $table->string('other_info')->nullable();
         });
     }
