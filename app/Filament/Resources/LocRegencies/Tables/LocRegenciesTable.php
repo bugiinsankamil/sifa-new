@@ -25,9 +25,9 @@ class LocRegenciesTable
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('id'),
-                TextColumn::make('regency_name')
+                TextColumn::make('name')
                     ->searchable(),
-                TextColumn::make('locProvince.province_name')
+                TextColumn::make('locProvince.name')
                     ->searchable(),
             ])
             ->filters([

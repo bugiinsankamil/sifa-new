@@ -12,15 +12,15 @@ class LocDistrictForm
     {
         return $schema
             ->components([
-                TextInput::make('district_name')
+                TextInput::make('name')
                     ->required(),
                 Select::make('loc_regency_id')
-                    ->relationship('locRegency', 'id')
+                    ->relationship('locRegency', 'name')
                     ->required(),
                 Select::make('loc_province_id')
-                    ->relationship('locProvince', 'id')
+                    ->relationship('locProvince', 'name')
                     ->required(),
-                TextInput::make('district_complete_name'),
+                TextInput::make('complete_name'),
             ]);
     }
 }

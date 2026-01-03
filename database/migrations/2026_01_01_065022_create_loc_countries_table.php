@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('loc_countries', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('country_name_indonesia')->nullable();
-            $table->string('country_name_english')->nullable();
+            $table->string('name')->nullable();
+            $table->string('name_english')->nullable();
             $table->string('capital_city')->nullable();
             $table->string('continent')->nullable();
             $table->string('region_name')->nullable();

@@ -20,8 +20,6 @@ class LocDistrictResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'district_name';
-
     public static function form(Schema $schema): Schema
     {
         return LocDistrictForm::configure($schema);

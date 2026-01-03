@@ -15,8 +15,8 @@ class LocCountryImporter extends Importer
     public static function getColumns(): array
     {
         return [
-            ImportColumn::make('country_name_indonesia'),
-            ImportColumn::make('country_name_english'),
+            ImportColumn::make('name'),
+            ImportColumn::make('name_english'),
             ImportColumn::make('capital_city'),
             ImportColumn::make('continent'),
             ImportColumn::make('region_name'),
@@ -38,7 +38,9 @@ class LocCountryImporter extends Importer
 
     public function resolveRecord(): LocCountry
     {
-        return new LocCountry();
+        return LocCountry::firstOrNew([
+            'id' => $this->data['id'],
+        ]);
     }
 
     public static function getCompletedNotificationBody(Import $import): string

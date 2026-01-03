@@ -16,7 +16,7 @@ class LocDistrictImporter extends Importer
     {
         return [
             ImportColumn::make('id'),
-            ImportColumn::make('district_name')
+            ImportColumn::make('name')
                 ->requiredMapping()
                 ->rules(['required']),
             ImportColumn::make('locRegency')
@@ -27,13 +27,15 @@ class LocDistrictImporter extends Importer
                 ->requiredMapping()
                 ->relationship()
                 ->rules(['required']),
-            ImportColumn::make('district_complete_name'),
+            ImportColumn::make('complete_name'),
         ];
     }
 
     public function resolveRecord(): LocDistrict
     {
-        return new LocDistrict();
+        return LocDistrict::firstOrNew([
+            'id' => $this->data['id'],
+        ]);
     }
 
     public static function getCompletedNotificationBody(Import $import): string

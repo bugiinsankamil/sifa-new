@@ -11,8 +11,8 @@ class LocCountryForm
     {
         return $schema
             ->components([
-                TextInput::make('country_name_indonesia'),
-                TextInput::make('country_name_english'),
+                TextInput::make('name'),
+                TextInput::make('name_english'),
                 TextInput::make('capital_city'),
                 TextInput::make('continent'),
                 TextInput::make('region_name'),

@@ -12,10 +12,10 @@ class LocRegencyForm
     {
         return $schema
             ->components([
-                TextInput::make('regency_name')
+                TextInput::make('name')
                     ->required(),
                 Select::make('loc_province_id')
-                    ->relationship('locProvince', 'id')
+                    ->relationship('locProvince', 'name')
                     ->required(),
             ]);
     }

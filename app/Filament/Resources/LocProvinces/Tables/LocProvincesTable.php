@@ -7,7 +7,6 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ImportAction;
-use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -17,7 +16,6 @@ class LocProvincesTable
     {
         return $table
             ->columns([
-                TextColumn::make('id'),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -26,9 +24,10 @@ class LocProvincesTable
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('province_name')
+                TextColumn::make('id'),
+                TextColumn::make('name')
                     ->searchable(),
-                TextColumn::make('locCountry.country_name_indonesia')
+                TextColumn::make('locCountry.name')
                     ->searchable(),
             ])
             ->filters([
@@ -44,7 +43,7 @@ class LocProvincesTable
             ])
             ->headerActions([
                 ImportAction::make()
-                    ->importer(LocProvinceImporter::class)
+                    ->importer(LocProvinceImporter::class),
             ]);
     }
 }

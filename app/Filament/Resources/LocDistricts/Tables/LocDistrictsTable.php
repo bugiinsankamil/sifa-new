@@ -25,13 +25,13 @@ class LocDistrictsTable
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('id'),
-                TextColumn::make('district_name')
+                TextColumn::make('name')
                     ->searchable(),
-                TextColumn::make('locRegency.id')
+                TextColumn::make('locRegency.name')
                     ->searchable(),
-                TextColumn::make('locProvince.id')
+                TextColumn::make('locProvince.name')
                     ->searchable(),
-                TextColumn::make('district_complete_name')
+                TextColumn::make('complete_name')
                     ->searchable(),
             ])
             ->filters([
@@ -47,7 +47,7 @@ class LocDistrictsTable
             ])
             ->headerActions([
                 ImportAction::make()
-                    ->importer(LocDistrictImporter::class), // To be implemented
+                    ->importer(LocDistrictImporter::class),
             ]);
     }
 }

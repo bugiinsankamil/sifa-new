@@ -6,7 +6,6 @@ use App\Models\LocProvince;
 use Filament\Actions\Imports\ImportColumn;
 use Filament\Actions\Imports\Importer;
 use Filament\Actions\Imports\Models\Import;
-use Filament\Forms\Components\Select;
 use Illuminate\Support\Number;
 
 class LocProvinceImporter extends Importer
@@ -17,7 +16,7 @@ class LocProvinceImporter extends Importer
     {
         return [
             ImportColumn::make('id'),
-            ImportColumn::make('province_name')
+            ImportColumn::make('name')
                 ->requiredMapping()
                 ->rules(['required']),
             ImportColumn::make('locCountry')
@@ -29,7 +28,9 @@ class LocProvinceImporter extends Importer
 
     public function resolveRecord(): LocProvince
     {
-        return new LocProvince();
+        return LocProvince::firstOrNew([
+            'id' => $this->data['id'],
+        ]);
     }
 
     public static function getCompletedNotificationBody(Import $import): string

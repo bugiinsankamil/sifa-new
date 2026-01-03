@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\LocVillages\Schemas;
 
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 
@@ -11,13 +12,13 @@ class LocVillageForm
     {
         return $schema
             ->components([
-                TextInput::make('village_name')
+                TextInput::make('name')
                     ->required(),
                 TextInput::make('type')
                     ->required(),
-                TextInput::make('loc_district_id')
-                    ->required()
-                    ->numeric(),
+                Select::make('loc_district_id')
+                    ->relationship('locDistrict', 'name')
+                    ->required(),
             ]);
     }
 }

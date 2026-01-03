@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('loc_districts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('district_name');
+            $table->string('name');
             $table->foreignId('loc_regency_id')->constrained();
             $table->foreignId('loc_province_id')->constrained();
-            $table->string('district_complete_name')->nullable();
+            $table->string('complete_name')->nullable();
         });
     }
 

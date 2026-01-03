@@ -25,13 +25,12 @@ class LocVillagesTable
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('id'),
-                TextColumn::make('village_name')
+                TextColumn::make('name')
                     ->searchable(),
                 TextColumn::make('type')
                     ->searchable(),
-                TextColumn::make('loc_district_id')
-                    ->numeric()
-                    ->sortable(),
+                TextColumn::make('locDistrict.name')
+                    ->searchable(),
             ])
             ->filters([
                 //
@@ -46,7 +45,8 @@ class LocVillagesTable
             ])
             ->headerActions([
                 ImportAction::make()
-                    ->importer(LocVillageImporter::class), // To be implemented
+                    ->importer(LocVillageImporter::class)
+                    ->chunkSize(1000),
             ]);
     }
 }

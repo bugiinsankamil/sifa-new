@@ -16,7 +16,7 @@ class LocRegencyImporter extends Importer
     {
         return [
             ImportColumn::make('id'),
-            ImportColumn::make('regency_name')
+            ImportColumn::make('name')
                 ->requiredMapping()
                 ->rules(['required']),
             ImportColumn::make('locProvince')
@@ -28,7 +28,9 @@ class LocRegencyImporter extends Importer
 
     public function resolveRecord(): LocRegency
     {
-        return new LocRegency();
+        return LocRegency::firstOrNew([
+            'id' => $this->data['id'],
+        ]);
     }
 
     public static function getCompletedNotificationBody(Import $import): string

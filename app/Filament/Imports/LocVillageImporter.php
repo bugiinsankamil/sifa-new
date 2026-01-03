@@ -15,7 +15,8 @@ class LocVillageImporter extends Importer
     public static function getColumns(): array
     {
         return [
-            ImportColumn::make('village_name')
+            ImportColumn::make('id'),
+            ImportColumn::make('name')
                 ->requiredMapping()
                 ->rules(['required']),
             ImportColumn::make('type')
@@ -30,7 +31,9 @@ class LocVillageImporter extends Importer
 
     public function resolveRecord(): LocVillage
     {
-        return new LocVillage();
+        return LocVillage::firstOrNew([
+            'id' => $this->data['id'],
+        ]);
     }
 
     public static function getCompletedNotificationBody(Import $import): string

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('loc_villages', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('village_name');
+            $table->string('name');
             $table->string('type');
             $table->foreignId('loc_district_id')->constrained();
         });
