@@ -1,0 +1,5 @@
+[{"id":1,"created_at":null,"updated_at":null,"name":"Sertifikat Hak Milik (SHM)","description":"Sertifikat yang menunjukkan kepemilikan penuh atas tanah."},
+{"id":2,"created_at":null,"updated_at":null,"name":"Sertifikat Hak Guna Bangunan (SHGB)","description":"Sertifikat yang memberikan hak untuk membangun di atas tanah milik orang lain."},
+{"id":3,"created_at":null,"updated_at":null,"name":"Sertifikat Hak Pakai","description":"Sertifikat yang memberikan hak untuk menggunakan tanah milik orang lain dalam jangka waktu tertentu."},
+{"id":4,"created_at":null,"updated_at":null,"name":"Sertifikat Hak Sewa","description":"Sertifikat yang menunjukkan hak sewa atas tanah untuk jangka waktu tertentu."},
+{"id":5,"created_at":null,"updated_at":null,"name":"Lainnya","description":"Jenis sertifikat lainnya yang tidak termasuk dalam kategori di atas."}]

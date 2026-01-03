@@ -1,0 +1,4 @@
+[{"id":1,"created_at":null,"updated_at":null,"name":"Baik","description":"Barang dalam kondisi baik"},
+{"id":2,"created_at":null,"updated_at":null,"name":"Rusak Ringan","description":"Barang mengalami kerusakan tapi masih dapat digunakan"},
+{"id":3,"created_at":null,"updated_at":null,"name":"Rusak Sedang","description":"Barang mengalami kerusakan dan ada fungsi yang tidak berjalan normal"},
+{"id":4,"created_at":null,"updated_at":null,"name":"Rusak Berat","description":"Barang mengalami kerusakan berat dan tidak dapat digunakan"}]

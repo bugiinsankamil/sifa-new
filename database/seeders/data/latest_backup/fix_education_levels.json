@@ -1,0 +1,12 @@
+[{"id":1,"created_at":null,"updated_at":null,"name":"PAUD","numeric_code":"01","description":"Jenjang PAUD/KB/TK/RA dan sederajat"},
+{"id":2,"created_at":null,"updated_at":null,"name":"SD/MI","numeric_code":"02","description":"Jenjang SD/MI dan sederajat"},
+{"id":3,"created_at":null,"updated_at":null,"name":"SMP/MTs","numeric_code":"03","description":"Jenjang SMP/MTs dan sederajat"},
+{"id":4,"created_at":null,"updated_at":null,"name":"SMA/SMK/MA","numeric_code":"04","description":"Jenjang SMA/SMK/MA dan sederajat"},
+{"id":5,"created_at":null,"updated_at":null,"name":"D1","numeric_code":"05","description":"Jenjang Diploma 1"},
+{"id":6,"created_at":null,"updated_at":null,"name":"D2","numeric_code":"06","description":"Jenjang Diploma 2"},
+{"id":7,"created_at":null,"updated_at":null,"name":"D3","numeric_code":"07","description":"Jenjang Diploma 3"},
+{"id":8,"created_at":null,"updated_at":null,"name":"D4","numeric_code":"08","description":"Jenjang Diploma 4"},
+{"id":9,"created_at":null,"updated_at":null,"name":"S1","numeric_code":"09","description":"Jenjang Sarjana/Strata 1"},
+{"id":10,"created_at":null,"updated_at":null,"name":"S2","numeric_code":"10","description":"Jenjang Magister/Strata 2"},
+{"id":11,"created_at":null,"updated_at":null,"name":"S3","numeric_code":"11","description":"Jenjang Doktor/Strata 3"},
+{"id":12,"created_at":null,"updated_at":null,"name":"Lainnya","numeric_code":"12","description":"Jenjang pendidikan lainnya"}]

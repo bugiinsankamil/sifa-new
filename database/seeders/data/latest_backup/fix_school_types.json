@@ -1,0 +1,4 @@
+[{"id":1,"created_at":null,"updated_at":null,"name":"Reguler","numeric_code":"01","description":"Sekolah regular di bawah naungan Kemdikbud"},
+{"id":2,"created_at":null,"updated_at":null,"name":"Madrasah","numeric_code":"02","description":"Madrasah di bawah naungan Kemenag"},
+{"id":3,"created_at":null,"updated_at":null,"name":"Boarding School","numeric_code":"03","description":"Boarding School / Pondok Pesantren dengan sistem mukim"},
+{"id":4,"created_at":null,"updated_at":null,"name":"Home Schooling","numeric_code":"04","description":"Model kegiatan belajar mengajar yang diselenggarakan di rumah"}]
