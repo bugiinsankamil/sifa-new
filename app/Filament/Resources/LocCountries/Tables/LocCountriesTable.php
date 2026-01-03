@@ -2,12 +2,9 @@
 
 namespace App\Filament\Resources\LocCountries\Tables;
 
-use App\Filament\Imports\LocCountryImporter;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Actions\ImportAction;
-use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -25,6 +22,7 @@ class LocCountriesTable
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('id'),
                 TextColumn::make('country_name_indonesia')
                     ->searchable(),
                 TextColumn::make('country_name_english')
@@ -66,17 +64,12 @@ class LocCountriesTable
                 //
             ])
             ->recordActions([
-                ViewAction::make(),
                 EditAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
                 ]),
-            ])
-            ->headerActions([
-                ImportAction::make()
-                    ->importer(LocCountryImporter::class),
             ]);
     }
 }
